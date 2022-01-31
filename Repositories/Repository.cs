@@ -34,6 +34,5 @@ namespace Blog.Repositories
             _connection.Delete<T>(model);
         }
 
-
     }
 }
