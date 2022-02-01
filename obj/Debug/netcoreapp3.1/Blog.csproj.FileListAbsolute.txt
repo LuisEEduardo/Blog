@@ -52,7 +52,6 @@
 /home/luis/dev/Blog/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
 /home/luis/dev/Blog/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll
 /home/luis/dev/Blog/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
-/home/luis/dev/Blog/obj/Debug/netcoreapp3.1/Blog.csprojAssemblyReference.cache
 /home/luis/dev/Blog/obj/Debug/netcoreapp3.1/Blog.AssemblyInfoInputs.cache
 /home/luis/dev/Blog/obj/Debug/netcoreapp3.1/Blog.AssemblyInfo.cs
 /home/luis/dev/Blog/obj/Debug/netcoreapp3.1/Blog.csproj.CoreCompileInputs.cache
@@ -60,3 +59,5 @@
 /home/luis/dev/Blog/obj/Debug/netcoreapp3.1/Blog.dll
 /home/luis/dev/Blog/obj/Debug/netcoreapp3.1/Blog.pdb
 /home/luis/dev/Blog/obj/Debug/netcoreapp3.1/Blog.genruntimeconfig.cache
+/home/luis/dev/Blog/obj/Debug/netcoreapp3.1/Blog.csproj.AssemblyReference.cache
+/home/luis/dev/Blog/obj/Debug/netcoreapp3.1/Blog.GeneratedMSBuildEditorConfig.editorconfig

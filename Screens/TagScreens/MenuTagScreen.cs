@@ -8,7 +8,7 @@ namespace Blog.Screens.TagScreens
         {
             Console.Clear();
             Console.WriteLine("Gestão tags");
-            Console.WriteLine("------------");
+            Console.WriteLine("-------------------");
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine();
             Console.WriteLine("1 - Listar tags");
@@ -17,6 +17,7 @@ namespace Blog.Screens.TagScreens
             Console.WriteLine("4 - Excluir tags");
             Console.WriteLine();
             Console.WriteLine();
+            Console.Write("Insira a opção: ");
             var option = short.Parse(Console.ReadLine());
 
             switch (option)

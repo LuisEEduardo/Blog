@@ -1,5 +1,6 @@
 ﻿using System;
 using Blog.Screens.TagScreens;
+using Blog.Screens.UserScreens;
 using Microsoft.Data.SqlClient;
 
 namespace Blog
@@ -21,7 +22,7 @@ namespace Blog
         {
             Console.Clear();
             Console.WriteLine("Meu Blog");
-            Console.WriteLine("-----------------");
+            Console.WriteLine("-------------------");
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine();
             Console.WriteLine("1 - Gestão de usuário");
@@ -33,10 +34,14 @@ namespace Blog
             Console.WriteLine("7 - Relatórios");
             Console.WriteLine();
             Console.WriteLine();
+            Console.Write("Insira a opção: ");
             var option = short.Parse(Console.ReadLine()!);
 
             switch (option)
             {
+                case 1: 
+                    MenuUserScreen.Load();
+                    break;
                 case 4:
                     MenuTagScreen.Load();
                     break;
