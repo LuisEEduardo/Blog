@@ -30,8 +30,10 @@ namespace Blog.Screens.UserScreens
                     CreateUserScreen.Load();
                     break; 
                 case 3:
+                    UpdateUserScreen.Load();
                     break; 
                 case 4:
+                    DeleteUserScreen.Load();
                     break; 
                 case 5:                    
                     break; 
