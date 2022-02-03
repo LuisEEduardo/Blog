@@ -1,4 +1,5 @@
 using System;
+using Blog.Screens.MainScreens;
 
 namespace Blog.Screens.UserScreens
 {
@@ -36,6 +37,7 @@ namespace Blog.Screens.UserScreens
                     DeleteUserScreen.Load();
                     break; 
                 case 5:                    
+                    MenuMainScreen.Load();
                     break; 
                 default: 
                     Load();
