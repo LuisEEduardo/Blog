@@ -32,7 +32,7 @@ namespace Blog.Screens.MainScreens
                 case 1: 
                     MenuUserScreen.Load();
                     break;
-                case 3: 
+                case 2: 
                     MenuRoleScreen.Load();
                     break;
                 case 4:

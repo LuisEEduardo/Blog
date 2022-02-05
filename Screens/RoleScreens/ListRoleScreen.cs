@@ -10,7 +10,7 @@ namespace Blog.Screens.RoleScreens
         {
             Console.Clear(); 
             Console.WriteLine();
-            Console.WriteLine("Lista de categorias");
+            Console.WriteLine("Lista de perfis");
             Console.WriteLine("--------------");
             List();
             Console.ReadKey();
@@ -30,7 +30,7 @@ namespace Blog.Screens.RoleScreens
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Não foi possível listar as categorias");
+                Console.WriteLine("Não foi possível listar os perfis");
                 Console.WriteLine(ex.Message);
             }
         }

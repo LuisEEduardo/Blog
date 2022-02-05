@@ -10,7 +10,7 @@ namespace Blog.Screens.RoleScreens
         {
             Console.Clear();
             Console.WriteLine();
-            Console.WriteLine("Criar categoria");
+            Console.WriteLine("Criar perfil");
             Console.WriteLine("--------------");
             Console.Write("Name: ");
             var name = Console.ReadLine();
@@ -18,7 +18,7 @@ namespace Blog.Screens.RoleScreens
             var slug = Console.ReadLine();
             Create(new Role
             {
-                Name = name, 
+                Name = name,
                 Slug = slug
             });
             Console.ReadKey();
@@ -31,11 +31,11 @@ namespace Blog.Screens.RoleScreens
             {
                 var repository = new Repository<Role>(Database.Connection);
                 repository.Create(role);
-                Console.WriteLine("Categoria criada com sucesso!");
+                Console.WriteLine("Perfil criado com sucesso!");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Não foi possível criar a categoria");
+                Console.WriteLine("Não foi possível criar o perfil");
                 Console.WriteLine(ex.Message);
             }
         }

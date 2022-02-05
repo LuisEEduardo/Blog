@@ -10,7 +10,7 @@ namespace Blog.Screens.RoleScreens
         {
             Console.Clear();
             Console.WriteLine();
-            Console.WriteLine("Excluir categoria");
+            Console.WriteLine("Excluir perfil");
             Console.WriteLine("--------------");
             Console.Write("Id: ");
             int id = int.Parse(Console.ReadLine());
@@ -25,11 +25,11 @@ namespace Blog.Screens.RoleScreens
             {
                 var repository = new Repository<Role>(Database.Connection);
                 repository.Delete(id);
-                Console.WriteLine("Categoria excluída com sucesso!");
+                Console.WriteLine("Perfil excluído com sucesso!");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Não foi possível excluir a categoria!");
+                Console.WriteLine("Não foi possível excluir o perfil!");
                 Console.WriteLine(ex.Message);
             }
         }

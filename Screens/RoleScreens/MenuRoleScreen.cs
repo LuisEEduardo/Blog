@@ -8,14 +8,14 @@ namespace Blog.Screens.RoleScreens
         public static void Load()
         {
             Console.Clear();
-            Console.WriteLine("Gestão de categorias");
+            Console.WriteLine("Gestão de perfis");
             Console.WriteLine("-------------------");
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine();
-            Console.WriteLine("1 - Listar categorias");
-            Console.WriteLine("2 - Cadastrar categorias");
-            Console.WriteLine("3 - Atualizar categorias");
-            Console.WriteLine("4 - Excluir categorias");
+            Console.WriteLine("1 - Listar perfis");
+            Console.WriteLine("2 - Cadastrar perfil");
+            Console.WriteLine("3 - Atualizar perfil");
+            Console.WriteLine("4 - Excluir perfil");
             Console.WriteLine("5 - Voltar ao menu principal");
             Console.WriteLine();
             Console.WriteLine();
