@@ -2,6 +2,7 @@ using System;
 using Blog.Screens.CategoryScreens;
 using Blog.Screens.RoleScreens;
 using Blog.Screens.TagScreens;
+using Blog.Screens.UserRoleScreens;
 using Blog.Screens.UserScreens;
 
 namespace Blog.Screens.MainScreens
@@ -30,23 +31,26 @@ namespace Blog.Screens.MainScreens
 
             switch (option)
             {
-                case 1: 
+                case 1:
                     MenuUserScreen.Load();
                     break;
-                case 2: 
+                case 2:
                     MenuRoleScreen.Load();
                     break;
-                case 3: 
+                case 3:
                     MenuCategoryScreen.Load();
                     break;
                 case 4:
                     MenuTagScreen.Load();
                     break;
-                case 8: 
+                case 5:
+                    MenuUserRoleScreen.Load();
+                    break;
+                case 8:
                     Console.WriteLine("Finalizando ...");
                     break;
-                default: 
-                    Load(); 
+                default:
+                    Load();
                     break;
             }
         }
