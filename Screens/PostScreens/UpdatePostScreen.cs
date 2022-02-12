@@ -13,7 +13,7 @@ namespace Blog.Screens.PostScreens
             Console.WriteLine("Atualizar post");
             Console.WriteLine("-------------");
             Console.Write("Id: ");
-            var id = Console.ReadLine();
+            int id = int.Parse(Console.ReadLine());
             Console.Write("Title: ");
             var title = Console.ReadLine();
             Console.Write("Summary: ");
@@ -23,16 +23,16 @@ namespace Blog.Screens.PostScreens
             Console.Write("Slug: ");
             var slug = Console.ReadLine();
             Console.Write("Author Id: ");
-            var authorId = int.Parse(Console.ReadLine());
+            int authorId = int.Parse(Console.ReadLine());
             Console.Write("Category Id: ");
-            var categoryId = int.Parse(Console.ReadLine());
+            int categoryId = int.Parse(Console.ReadLine());
             Create(new Post
             {
+                Id = id,
                 Title = title,
                 Summary = summary,
                 Body = body,
                 Slug = slug,
-                CreateDate = DateTime.Now,
                 LastUpdateDate = DateTime.Now,
                 AuthorId = authorId,
                 CategoryId = categoryId
@@ -45,8 +45,9 @@ namespace Blog.Screens.PostScreens
         {
             try
             {
-                var repository = new Repository<Post>(Database.Connection);
-                repository.Update(post);
+                //var repository = new Repository<Post>(Database.Connection);
+                var repository = new PostRepository(Database.Connection);
+                repository.UpdatePost(post);
                 Console.WriteLine("Post atualizado com sucesso!");
             }
             catch (Exception ex)

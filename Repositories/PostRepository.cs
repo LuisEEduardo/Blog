@@ -17,27 +17,28 @@ namespace Blog.Repositories
         {
             var query = @"
                         UPDATE [Post]
-                        SET Title = @title,
-                            Summary = @summary,
-                            Body = @body,
-                            Slug = @slug,        
-                            CreateDate = @createDate,        
-                            LastUpdateDate = @date,
-                            AuthorId = @authorId,
-                            CategoryId = @categoryId
+                        SET Title = @title,  
+                        Summary = @summary,
+                        Body = @body,
+                        Slug = @slug,       
+                        AuthorId = @authorId,    
+                        CategoryId = @categoryId,                                 
+                        LastUpdateDate = @lastUpdateDate                                                
                         WHERE Id = @id";
 
-            _connection.Execute(query, new
+            var rows = _connection.Execute(query, new
             {
                 id = post.Id,
-                summary = post.Summary, 
+                title = post.Title,
+                summary = post.Summary,
                 body = post.Body,
-                slug = post.Slug, 
-                createDate = DateTime.Now,
-                date = DateTime.Now,
+                slug = post.Slug,
+                lastUpdateDate = DateTime.Now,
                 authorId = post.AuthorId,
-                categoryId = post.CategoryId
+                categoryId = post.CategoryId,
             });
+
+            Console.WriteLine($"{rows} row affected");
 
         }
     }
