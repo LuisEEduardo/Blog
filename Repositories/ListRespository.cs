@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Blog.Models;
 using Dapper;
@@ -57,6 +58,7 @@ namespace Blog.Repositories
                         AND 
                     p.Id = (SELECT PostId 
                             FROM [PostTag])";
+
             var tags = _connection.Query<Tag, Post, Tag>(
                     query,
                     map: (tag, post) =>
@@ -64,10 +66,33 @@ namespace Blog.Repositories
                         tag.Posts.Add(post);
                         return tag;
                     },
-                    splitOn: "Id,Id");                    
+                    splitOn: "Id");
             return tags;
         }
 
+        public IEnumerable<Post> ListPostsWithOwnTags()
+        {
+            var query = @"
+                        SELECT * 
+                        FROM [Tag] as t
+                                INNER JOIN  
+                            [Post] as p
+                            ON t.Id = (SELECT TagId 
+                                        FROM [PostTag]) 
+                                    AND 
+                                p.Id = (SELECT PostId 
+                                        FROM [PostTag])";
+
+            var posts = _connection.Query<Tag, Post, Post>(
+                query,
+                map: (tag, post) =>
+                {
+                    post.Tags.Add(tag);
+                    return post;
+                },
+                splitOn: "Id,Id");
+            return posts;
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using Blog.Repositories;
 
 namespace Blog.Screens.ReportScreens
 {
@@ -17,7 +18,24 @@ namespace Blog.Screens.ReportScreens
 
         public static void List()
         {
-            
+            try
+            {
+                var repository = new ListRepository(Database.Connection);
+                var posts = repository.ListPostsWithOwnTags();
+
+                foreach (var post in posts)
+                {
+                    Console.Write($"Nome: {post.Title} - Quantidade: {post.Tags.Count}");
+                    Console.WriteLine();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Não foi possível listar os posts");
+                Console.WriteLine(ex.Message);
+            }
+
         }
 
     }

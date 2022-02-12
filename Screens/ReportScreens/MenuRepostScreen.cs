@@ -35,6 +35,9 @@ namespace Blog.Screens.ReportScreens
                 case 4:
                     ListListAllPostsWithOwnCategory.Load();
                     break;
+                case 5: 
+                    ListPostsWithOwnTags.Load();
+                    break;
                 case 6:
                     MenuMainScreen.Load();
                     break;

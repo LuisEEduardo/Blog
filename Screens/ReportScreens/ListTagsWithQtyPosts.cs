@@ -22,10 +22,9 @@ namespace Blog.Screens.ReportScreens
             {
                 var repository = new ListRepository(Database.Connection);
                 var tags = repository.ListTagsWithQtyPosts();
-
                 foreach (var tag in tags)
                 {
-                    Console.Write($"Nome: {tag} "); // - Quantidade: {tag.Posts.Count}
+                    Console.Write($"Nome: {tag.Name} - Quantidade: {tag.Posts.Count}");                    
                 }
 
             }

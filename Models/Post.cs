@@ -7,6 +7,12 @@ namespace Blog.Models
     [Table("[Post]")]
     public class Post
     {
+        public Post()
+        {
+            Tags = new List<Tag>();
+        }
+
+
         public int Id { get; set; }        
         public string Title { get; set; }
         public string Summary { get; set; }
